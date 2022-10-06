@@ -11,6 +11,11 @@
       conn_name: "{{ iface }}"
       ifname: "{{ iface }}"
       type: ethernet
-      ip4: 192.0.2.100/24
-      gw4: 192.0.2.1
+      ip4: "{{ ip_subnet }}"
+      gw4: "{{ gateway }}"
+      dns4:
+        - 172.22.110.10
+        - 172.24.110.10
+      dns4_search:
+        - calgarycoop.com
       state: present
