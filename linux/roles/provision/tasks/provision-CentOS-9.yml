@@ -14,8 +14,7 @@
       ip4: "{{ ip_subnet }}"
       gw4: "{{ gateway }}"
       dns4:
-        - 172.22.110.10
-        - 172.24.110.10
+        - 192.168.0.1
       dns4_search:
-        - calgarycoop.com
+        - tylerripley.int
       state: present
