@@ -7,14 +7,14 @@
     register: iface
 
 - name: Add an Ethernet connection with static IP configuration
-    community.general.nmcli:
-      conn_name: "{{ iface }}"
-      ifname: "{{ iface }}"
-      type: ethernet
-      ip4: "{{ ip_subnet }}"
-      gw4: "{{ gateway }}"
-      dns4:
-        - 192.168.0.1
-      dns4_search:
-        - tylerripley.int
-      state: present
+  community.general.nmcli:
+    conn_name: "{{ iface }}"
+    ifname: "{{ iface }}"
+    type: ethernet
+    ip4: "{{ ip_subnet }}"
+    gw4: "{{ gateway }}"
+    dns4:
+      - 192.168.0.1
+    dns4_search:
+      - tylerripley.int
+    state: present
