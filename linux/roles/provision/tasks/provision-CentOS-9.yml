@@ -24,6 +24,7 @@
 - name: Change Hostname
   ansible.builtin.hostname:
     name: "{{ host_name }}"
+    use: generic
 
 - name: Reboot to accept changes
   ansible.builtin.reboot:
