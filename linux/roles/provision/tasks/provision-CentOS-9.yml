@@ -6,10 +6,12 @@
     cmd: "nmcli -t device | grep ethernet:connected | cut -d ':' -f 1 -"
   register: iface
 
+# The iface variable contains multiple properties
+# iface.stdout should be the output of the command we want
 - name: Add an Ethernet connection with static IP configuration
   community.general.nmcli:
-    conn_name: "{{ iface }}"
-    ifname: "{{ iface }}"
+    conn_name: "{{ iface.stdout }}"
+    ifname: "{{ iface.stdout }}"
     type: ethernet
     ip4: "{{ ip_subnet }}"
     gw4: "{{ gateway }}"
