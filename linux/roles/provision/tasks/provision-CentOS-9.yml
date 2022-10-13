@@ -8,7 +8,7 @@
 
 # The iface variable contains multiple properties
 # iface.stdout should be the output of the command we want
-- name: Add an Ethernet connection with static IP configuration
+- name: "Add a static IP on {{ iface.stdout }}"
   community.general.nmcli:
     conn_name: "{{ iface.stdout }}"
     ifname: "{{ iface.stdout }}"
@@ -24,7 +24,6 @@
 - name: Change Hostname
   ansible.builtin.hostname:
     name: "{{ host_name }}"
-    use: systemd
 
 - name: Reboot to accept changes
   ansible.builtin.reboot:
