@@ -4,7 +4,7 @@
 - name: Find out the Ethernet Interface
   ansible.builtin.shell:
     cmd: "nmcli -t device | grep ethernet:connected | cut -d ':' -f 1 -"
-    register: iface
+  register: iface
 
 - name: Add an Ethernet connection with static IP configuration
   community.general.nmcli:
