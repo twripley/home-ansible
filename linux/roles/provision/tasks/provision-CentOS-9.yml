@@ -20,3 +20,11 @@
     dns4_search:
       - tylerripley.int
     state: present
+
+- name: Change Hostname
+  ansible.builtin.hostname:
+    name: "{{ host_name }}"
+    use: systemd
+
+- name: Reboot to accept changes
+  ansible.builtin.reboot:
