@@ -26,5 +26,7 @@
   ansible.builtin.shell:
     cmd: "echo {{ host_name }} > /etc/hostname"
 
+# Don't wait for reboot - because the IP changed
 - name: Reboot to accept changes
   ansible.builtin.reboot:
+    reboot_timeout: 1
