@@ -16,13 +16,13 @@
 
 - name: Copy File - 10-sudoers-secure_path
   ansible.builtin.copy:
-    src: "{{ role_path }} /files/10-sudoers-secure_path"
+    src: "{{ role_path }}/files/10-sudoers-secure_path"
     dest: /etc/sudoers.d
     backup: true
 
 - name: Copy File - 99-sudoers-tripley
   ansible.builtin.copy:
-    src: files/99-sudoers-tripley
+    src: "{{ role_path }}/files/99-sudoers-tripley"
     dest: /etc/sudoers.d
     backup: true
 
