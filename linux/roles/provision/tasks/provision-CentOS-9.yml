@@ -21,10 +21,10 @@
       - tylerripley.int
     state: present
 
+# Can't use the builtin hostname for some reason
 - name: Change Hostname
-  ansible.builtin.hostname:
-    name: "{{ host_name }}"
-    use: generic
+  ansible.builtin.shell:
+    cmd: "echo {{ host_name }} > /etc/hostname"
 
 - name: Reboot to accept changes
   ansible.builtin.reboot:
