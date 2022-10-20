@@ -1,0 +1,10 @@
+---
+collections:
+  - name: amazon.aws
+  - name: ansible.posix
+  - name: ansible.windows
+  - name: awx.awx
+  - name: chocolatey.chocolatey
+  - name: community.general
+  - name: community.vmware
+  - name: community.windows
