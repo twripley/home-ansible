@@ -1,7 +1,0 @@
----
-collections:
-  - name: amazon.aws
-  - name: ansible.posix
-  - name: awx.awx
-  - name: community.general
-  - name: community.vmware
