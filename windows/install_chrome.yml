@@ -4,7 +4,7 @@
 - name: Install Chrome from Chocolatey
   hosts: all
   gather_facts: no
-  become: true
+  become_method: runas
 
   tasks:
     - name: Install Google Chrome
