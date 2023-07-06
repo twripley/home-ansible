@@ -24,9 +24,9 @@
     - name: Configure SNMP Community
       community.windows.win_snmp:
         community_strings:
-        - 0rionSNMPv2c
+        - SomeCommString
         permitted_managers:
-        - 172.22.110.5
+        - 1.2.3.4
         action: set
     
     # No NTP module - https://github.com/ansible-collections/community.windows/issues/114
