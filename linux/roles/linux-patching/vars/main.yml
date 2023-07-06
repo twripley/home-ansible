@@ -1,0 +1,6 @@
+---
+# vars file for linux-patching
+
+# Team email addresses and SMTP info
+# Put this in a separate VARS file and include at runtime
+# That way these are not kept in GitHub

@@ -1,0 +1,15 @@
+---
+# vars file for linux-patching
+
+# Team email addresses and SMTP info
+# notify_email: Comma separated list of emails for notifications
+notify_email: User1 <user1@host.com>, User2 <user2@host.com>
+
+# from_email: From address for notifications
+from_email: Ansible Controller <ansible@ansible.com>
+
+# mail_server: SMTP server for email notifications
+mail_server: mail.mail.com
+
+# mail_port: SMTP server port
+mail_port: 25

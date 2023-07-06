@@ -1,0 +1,19 @@
+# Use the linux-patching role to patch our Linux servers
+
+# Sensitive VARS need to be included at runtime so they are not kept in GitHub
+
+# Usage
+# ansible-playbook linux-patching.yml -i {host(s)}, --extra-vars "@linux-patching-vars.yml"
+
+---
+- hosts: all
+  become: yes
+  vars_prompt:
+  - name: snapshot
+    prompt: "Did you take a snapshot of the guest you are patching?"
+    private: no
+  roles:
+    - linux-patching
+  vars:
+    - ospatch_level: full
+    - ospatch_reboot: true
