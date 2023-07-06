@@ -4,6 +4,9 @@
 - name: check if host is online
   include_tasks: ping.yml
 
+- name: Take a snapshot of the Guest
+  include_tasks: snapshot.yml
+
 - name: Send out PRE Email
   become: false
   mail:
